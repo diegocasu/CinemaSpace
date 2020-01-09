@@ -13,7 +13,7 @@ please refer to the code inside the `single_server_version` branch.
 
  
 - Import the Eclipse Maven project
-- Set up a MongoDB replica set or a MongoDB single server.
+- Set up a MongoDB replica set or a MongoDB single server
 - Update `configuration.xml` according to the database configuration (name of the set, addresses and ports of the nodes)
 - Unzip the MongoDB dump file and restore the database using `mongorestore`
 - Execute from `cinemaspace.controller.CinemaSpaceLauncher`
