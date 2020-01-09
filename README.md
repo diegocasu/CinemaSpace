@@ -1,25 +1,34 @@
-# Cinemaspace
+# CinemaSpace
 
 ## Description
 Task 2 project for the Large-Scale and Multi-Structured Databases course of the Master of Science in Computer Engineering, University of Pisa.  
 
-## Install
+For more details, please refer to the specification document.
 
-The project can run either on a MongoDB replica set or on a MongoDB single server.  If you want to run in single server mode, 
-please refer to the code inside the `single_server_version` branch.
+## Installation
 
-| :warning: ATTENTION: the dataset is large and the replication process can take a long time. </br> It is suggested to run the application in single server mode. |
+The project can be configured to run either on a MongoDB replica set or on a MongoDB single server.  If you want to use the single server mode, 
+please refer to the code inside the `single_server_version` branch.  
+
+| :warning: ATTENTION: the dataset is large and the replication process can take a long time. </br> It is suggested to configure MongoDB in single server mode. |
 |:--- |
 
- 
 - Import the Eclipse Maven project
 - Set up a MongoDB replica set or a MongoDB single server
-- Update `configuration.xml` according to the database configuration (name of the set, addresses and ports of the nodes)
-- Unzip the MongoDB dump file and restore the database using `mongorestore`
+- Update `configuration.xml` according to the configuration of the database (name of the set, addresses and ports of the nodes)
+- Unzip the MongoDB dump file and restore the MongoDB database using `mongorestore`
 - Execute from `cinemaspace.controller.CinemaSpaceLauncher`
 
-For more details, please refer to the specification document.
-  
+## Test credentials
+
+**Normal user**  
+Username: soni<span>@ponsufpo.gi  
+Password: motew  
+
+**Administrator**  
+Username: admin<span>@unipi.it  
+Password: admin
+
 ## Dataset credits
 
 The population of the database has been done starting from the pre-existing public dataset [The Movies Dataset](https://www.kaggle.com/rounakbanik/the-movies-dataset).  
