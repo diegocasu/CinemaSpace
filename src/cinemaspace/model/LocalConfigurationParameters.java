@@ -49,22 +49,11 @@ public class LocalConfigurationParameters {
         if (configurationDocument == null)
             return false;
         
-        NodeList replicaSet = configurationDocument.getElementsByTagName("replica");
-        String replicaName = configurationDocument.getElementsByTagName("replicaName").item(0).getTextContent();
+        String addressDBMS = configurationDocument.getElementsByTagName("addressDBMS").item(0).getTextContent();
+        String portDBMS = configurationDocument.getElementsByTagName("portDBMS").item(0).getTextContent();
         
-        List<String> replicasAddress = new ArrayList<String>();
-        
-        for (int i = 0; i < replicaSet.getLength(); i++) {
-          Element replica = (Element) replicaSet.item(i);
-          String addressDBMS = replica.getElementsByTagName("addressDBMS").item(0).getTextContent();
-          String portDBMS = replica.getElementsByTagName("portDBMS").item(0).getTextContent();
-          
-          replicasAddress.add(addressDBMS + ":" + portDBMS);
-        }
-         
-        connectionString += String.join(",", replicasAddress);
-        connectionString += "/?replicaSet=" + replicaName;
-
+        connectionString += addressDBMS + ":" + portDBMS;
+     
         return true;
     }
     
