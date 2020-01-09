@@ -10,7 +10,7 @@
 							<xs:element name="replicaName" type="xs:string"></xs:element>
 							<xs:element name="replicaSet">
 								<xs:complexType>
-									<xs:sequence minOccurs="0" maxOccurs="unbounded">
+									<xs:sequence minOccurs="1" maxOccurs="unbounded">
 										<xs:element name="replica">
 											<xs:complexType>
 												<xs:sequence>
